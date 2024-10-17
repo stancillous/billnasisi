@@ -87,7 +87,7 @@ header nav {
 header nav .menu-links a {
   padding: 0.8rem 2.5rem;
 }
-header nav .menu-links a:nth-child(1) {
+header nav .menu-links a:nth-child(2) {
   background-color: #F29C07;
   border: none;
 }
@@ -146,6 +146,7 @@ header nav .menu-links .signup {
   margin-right: unset;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right {
+  overflow: hidden;
   height: 40rem;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right img {
@@ -188,73 +189,6 @@ header nav .menu-links .signup {
 }
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b-shadow {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.testimonials-ord {
-  display: none;
-  background-color: #ebebfb;
-  padding: 10rem 0;
-}
-.testimonials-ord .testimonials-wrp {
-  margin: 0 auto;
-}
-.testimonials-ord .testimonials-wrp h1 {
-  font-size: 2.8rem;
-  font-weight: 500;
-  color: #315c81;
-}
-.testimonials-ord .testimonials-wrp a {
-  text-decoration: underline;
-  text-transform: capitalize;
-  font-size: 1.4rem;
-  color: #315c81;
-}
-.testimonials-ord .testimonials-wrp .t-grid {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  min-height: 40rem;
-  margin: 2rem 0;
-  margin-top: 8rem;
-  grid-gap: 1rem;
-}
-.testimonials-ord .testimonials-wrp .t-grid .reviewer {
-  text-align: center;
-}
-.testimonials-ord .testimonials-wrp .t-grid .tleft {
-  background-color: #315c81;
-  color: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.testimonials-ord .testimonials-wrp .t-grid span {
-  font-size: 1.4rem;
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
-  padding: 2rem 0;
-  display: inline-block;
-  font-weight: 600;
-}
-.testimonials-ord .testimonials-wrp .t-grid .tuser {
-  margin-right: 2rem;
-  opacity: 0.7;
-}
-.testimonials-ord .testimonials-wrp .t-grid .t-property {
-  opacity: 0.6;
-}
-.testimonials-ord .testimonials-wrp .t-grid .review {
-  font-size: 3.8rem;
-  font-weight: 500;
-  opacity: 0.8;
-}
-.testimonials-ord .testimonials-wrp .t-grid img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  border-radius: 1rem;
 }
 
 .available-plans-section {
@@ -381,6 +315,11 @@ header nav .menu-links .signup {
 .mtk .mtk-wrp {
   text-align: center;
 }
+.mtk .mtk-wrp .mtk-hd p {
+  width: 500px;
+  margin: auto;
+  opacity: 0.8;
+}
 .mtk .mtk-wrp .mtk-hd h1 {
   font-size: 4rem;
   margin: 2rem 0;
@@ -417,6 +356,7 @@ header nav .menu-links .signup {
 }
 .footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 .footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left ul li {
@@ -443,6 +383,15 @@ header nav .menu-links .signup {
 }
 
 @media screen and (max-width: 750px) {
+  .site-pri-logo {
+    width: 11rem;
+  }
+  ul li {
+    font-size: 1.5rem !important;
+  }
+  p {
+    font-size: 1.5rem;
+  }
   .top-page-section {
     padding-top: 3rem;
   }
@@ -455,22 +404,6 @@ header nav .menu-links .signup {
   .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg {
     grid-template-columns: 1fr;
   }
-  .features-ord .fc-content .features-wrp {
-    display: flex;
-    overflow-x: scroll;
-  }
-  .features-ord .fc-content .features-wrp .feature {
-    min-width: 25rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-right: 2.5rem;
-  }
-  .testimonials-ord .testimonials-wrp .t-grid {
-    display: flex;
-    flex-direction: column;
-  }
-  .testimonials-ord .testimonials-wrp .t-grid .review {
-    font-size: 2.5rem;
-  }
   .available-plans-section .aps-wrapper .aps-container .aps-wrp .all-plans-wrapper .apw-wrp .apw-container {
     display: flex;
     flex-direction: column;
@@ -478,4 +411,10 @@ header nav .menu-links .signup {
   .available-plans-section .aps-wrapper .aps-container .aps-wrp .all-plans-wrapper .apw-wrp .apw-container .apw-plan {
     margin: 3rem 0;
   }
-}/*# sourceMappingURL=old.css.map */
+  .mtk .mtk-wrp .mtk-hd p {
+    width: unset;
+  }
+  .mtk .mtk-wrp .mtk-hd h1 {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -27,22 +27,22 @@
           <div class="tps-container">
             <div class="dg-wrp">
               <div class="grid-left">
-                <h1 class="gl-ttl">
+                <h1 class="gl-ttl animate-section">
                   Streamlined ISP Billing System Effortlness Billing, Unmatched
                 Efficiency
                 </h1>
-                <p class="gl-p">
+                <p class="gl-p animate-section">
                                 Simplify your ISP billing with our advanced, automated system
                 designed for seamless operations and maximum efficiency.
                 </p>
-                <div class="btns-wrp">
+                <div class="btns-wrp animate-section">
                   <a href="">Get a quote</a>
                   <a href="">Sign in</a>
                 </div>
               </div>
               <div class="grid-right">
                 <div class="ill-image-container">
-                  <img src="https://billnasi.com/assets/img/hero-image2.png" alt="hero illustration" />
+                  <img class="tps-img" src="https://billnasi.com/assets/img/hero-image2.png" alt="hero illustration" />
                 </div>
               </div>
             </div>
@@ -97,52 +97,20 @@
         </div>
       </section>
     
-      <section class="testimonials-ord">
-        <div class="testimonials-wrp">
-          <h1>Our customers say it best</h1>
-          <NuxtLink to="/">See all case studies</NuxtLink>
-    
-          <div class="t-grid">
-            <div class="tleft">
-              <div class="reviewer">
-                <span class="tuser">jane doe</span>
-                <span class="t-property">Agent | mugumo heights</span>
-              </div>
-    
-              <div class="review">
-                <p>
-                  "Managing properties across Mombasa, Nakuri, and Niaorbi with
-                  LeasEstate has been a game-changer for our business."
-                </p>
-                <div class="navbtns">
-                  <!-- <span>prev</span> -->
-                  <!-- <span>next</span> -->
-                </div>
-              </div>
-            </div>
-            <div class="tright">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsLZp7ykncQiI591jXoVeXuTsFxcgi_32Aj_5ZSuXBHlvrgdQPNH2qOpnoWC2XQI3OlwM&usqp=CAU"
-                alt="image of a building managed by leasEstate"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    
       <section class="available-plans-section">
         <div class="aps-wrapper">
           <div class="aps-container">
             <div class="aps-wrp">
               <div class="aps-ttls">
                 <p class="section-sttl">PRICING PLANS</p>
-                <p class="section-ttl">
+                <p class="section-ttl plans-animation">
                   The right plan for <br />
                   your business
                 </p>
-                <p>
+                <p class="plans-animation">
 Select the plan that suits your needs
-            and start benefiting from automated billing solutions.                </p>
+            and start benefiting from automated billing solutions.               
+          </p>
               </div>
     
               <div class="all-plans-wrapper">
@@ -276,12 +244,12 @@ Select the plan that suits your needs
         <div class="mtk-wrp">
           <div class="mtk-hd">
 
-            <p>
+            <p class="mtk-ttl">
               Mikrotik Integration with various payment platforms for enhanced
               functionality.
             </p>
           </p>
-          <h1>Mikrotik, M-Pesa and SMS Integration</h1>
+          <h1 class="mtk-ttl">Mikrotik, M-Pesa and SMS Integration</h1>
           </div>
 
           <div class="img">
@@ -342,6 +310,11 @@ Select the plan that suits your needs
 
 
     </main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
 
