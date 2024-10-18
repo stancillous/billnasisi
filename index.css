@@ -276,7 +276,7 @@ header nav .menu-links .signup {
   border-radius: 50%;
 }
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .lbw-ttle-wrp {
-  padding-left: 5.6rem;
+  padding-left: 4rem;
 }
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .lbw-ttle-wrp .num {
   font-size: 9rem;
@@ -598,13 +598,23 @@ header nav .menu-links .signup {
     font-size: 5rem !important;
   }
   .grid-right {
-    height: 70rem !important;
+    height: auto !important;
+    padding-bottom: unset !important;
   }
   .grid-right .ill-image-container {
     flex-direction: column;
   }
   .grid-right .ill-image-container .person-img {
     transform: scale(1) !important;
+  }
+  .grid-right .ill-image-container .gr-dets {
+    width: 30rem !important;
+  }
+  .grid-right .ill-image-container .gr-dets h2 {
+    font-size: 2.4rem !important;
+  }
+  .grid-right .ill-image-container .gr-dets div {
+    margin: 1rem 0;
   }
   .site-pri-logo {
     width: 11rem;
@@ -656,7 +666,7 @@ header nav .menu-links .signup {
 }
 @media screen and (max-width: 550px) {
   .gl-ttl {
-    font-size: 4rem !important;
+    font-size: 3.2rem !important;
   }
 }
 @media screen and (max-width: 380px) {
