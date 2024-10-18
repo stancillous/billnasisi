@@ -1,8 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 :root {
+  --web-sec-color: rgb(50, 105, 130);
   --web-primary-color: #179bd7;
   --maxWidth: 1300px;
+  --pageOrange: #f29c07;
+  --pageBlue: blue;
+  --s: 200px; /* control the size*/
+  --c1: rgb(244, 208, 118);
+  --c2: #5e9fa3;
 }
 
 * {
@@ -42,12 +48,14 @@ a:hover {
 }
 
 .section-ttl {
-  font-weight: 500;
-  font-size: 3.5rem;
   opacity: 0.8;
-  padding: 2rem 0;
+  font-weight: 500;
+  padding: 0.5rem 0 3rem 0;
+  font-size: 4rem;
+  max-width: 600px;
   text-align: center;
-  color: var(--web-primary-color);
+  margin: auto;
+  text-transform: capitalize;
 }
 
 .page-btn {
@@ -85,19 +93,44 @@ header nav {
   align-items: center;
   justify-content: space-between;
 }
+header nav .menu-links {
+  display: flex;
+  align-items: center;
+}
 header nav .menu-links a {
+  white-space: nowrap;
   padding: 0.8rem 2.5rem;
+}
+header nav .menu-links a:nth-child(1) {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+header nav .menu-links a:nth-child(1) svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.6rem;
+}
+header nav .menu-links a:nth-child(1):hover {
+  text-decoration: underline;
 }
 header nav .menu-links a:nth-child(2) {
   background-color: rgba(242, 156, 7, 0.8);
   border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .menu-links a:nth-child(2) svg {
+  width: 2rem;
 }
 header nav .menu-links .signup {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .top-page-section {
   padding: 10rem 0;
+  padding-top: 2rem;
 }
 .top-page-section .tps-wrapper {
   margin: 0 auto;
@@ -109,9 +142,6 @@ header nav .menu-links .signup {
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp {
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
   justify-content: flex-end;
   height: 100%;
 }
@@ -119,10 +149,11 @@ header nav .menu-links .signup {
   height: 100%;
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: center;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-left .gl-ttl {
-  font-size: 3.4rem;
+  font-size: 6.4rem;
   font-weight: 500;
   margin: 2rem 0;
 }
@@ -148,14 +179,59 @@ header nav .menu-links .signup {
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right {
   overflow: hidden;
-  height: 40rem;
+  margin-top: 4rem;
+  background: repeating-conic-gradient(var(--c1) 0 25%, rgba(0, 0, 0, 0) 0 50%) 0 0/calc(4 * var(--s)) calc(2 * var(--s)), conic-gradient(rgba(0, 0, 0, 0) 50%, var(--c2) 0) calc(var(--s) / 2) 0/calc(2 * var(--s)) 1%, radial-gradient(var(--c2) 70%, var(--c1) 72%) 0 0/var(--s) var(--s);
+  height: 50rem;
+  border-radius: 1rem;
+  padding: 3rem 0;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .ill-image-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .person-img {
+  mix-blend-mode: multiply;
+  z-index: 3;
+  transform: scale(1.5);
+  height: 100%;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .gr-dets {
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 4;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  display: flex;
+  width: 37rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .gr-dets h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  opacity: 0.7;
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .gr-dets div {
+  border-bottom: 1px solid gainsboro;
+  opacity: 0.8;
+  padding: 0.4rem 0;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .gr-dets div h1 {
+  font-size: 1.6rem;
+  padding: 0.6rem 0;
+  font-weight: 500;
+}
+.top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .gr-dets div h4 {
+  font-size: 2rem;
+  opacity: 0.8;
+  font-weight: 500;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right img {
-  width: 100%;
-  height: 100%;
-  height: 36rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .lt-benefits-wrapper .lbw-wrp {
@@ -172,24 +248,139 @@ header nav .menu-links .signup {
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.4rem;
+  margin-top: 4rem;
 }
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b {
   padding: 3rem;
-  height: 28rem;
-  display: grid;
-  place-items: center;
-  text-align: center;
+  height: 58rem;
+  border: 1px solid gainsboro;
+  border-radius: 2rem;
 }
-.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .lbw-ttle {
-  font-size: 2.1rem;
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .content-wrp {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-gap: 0.2rem;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .content-wrp .dot {
+  margin-top: 0.5rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .lbw-ttle-wrp {
+  padding-left: 5.6rem;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .lbw-ttle-wrp .num {
+  font-size: 9rem;
+  font-weight: 700;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .grid-ctr .lbw-ttle-wrp .lbw-ttle {
+  font-size: 1.8rem;
+  padding-top: 0.7rem;
   font-weight: 500;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .lbw-p {
   line-height: 170%;
 }
-.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b-shadow {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-shad {
+  background-color: rgba(161, 190, 244, 0.239);
+  background-color: var(--web-sec-color);
+  color: white;
+}
+.lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-shad .dot {
+  background-color: rgba(245, 245, 245, 0.4) !important;
+}
+
+.faq-wrp {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.faq-wrp .faq-wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 2rem;
+  margin: 4rem 0;
+  padding: 1rem 0;
+  place-items: center;
+}
+.faq-wrp .faq-wrapper .faq-grid-right {
+  margin-left: 3rem;
+}
+.faq-wrp .faq-wrapper .faq-grid-right .img-wrp {
+  background-color: var(--web-sec-color);
+  display: grid;
+  place-items: center;
+  border-radius: 2rem;
+  min-height: 40rem;
+  min-width: 40rem;
+}
+.faq-wrp .faq-wrapper .faq-grid-right .img-wrp img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 2rem;
+}
+.faq-wrp .faq-wrapper .faq-container {
+  color: black;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem 0.1rem;
+}
+.faq-wrp .faq-wrapper .faq-container p {
+  line-height: 160%;
+  padding: 0.5rem 0;
+}
+.faq-wrp .faq-wrapper .faq-container .question {
+  opacity: 0.8;
+  padding: 1.7rem 0.1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq-wrp .faq-wrapper .faq-container .question h3 {
+  font-size: 1.9rem;
+  color: rgb(7, 7, 47);
+  font-weight: 500;
+}
+.faq-wrp .faq-wrapper .faq-container .question svg {
+  border: 0.4px solid gainsboro;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+.faq-wrp .faq-wrapper .faq-container .answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.faq-wrp .faq-wrapper .faq-container .answercont .answer {
+  padding: 1rem 0;
+  padding-right: 3rem;
+  font-size: 1.7rem;
+  opacity: 0.9;
+}
+.faq-wrp .faq-wrapper .faq-container .answercont .answer p {
+  opacity: 0.8;
+}
+
+.question.active svg {
+  transform: rotate(45deg);
 }
 
 .available-plans-section {
@@ -295,6 +486,7 @@ header nav .menu-links .signup {
 .available-plans-section .aps-wrapper .aps-container .aps-wrp .all-plans-wrapper .apw-wrp .apw-container .apw-plan .apw-btn a {
   width: 100%;
   background-color: var(--web-primary-color);
+  background-color: var(--web-sec-color);
   color: white;
 }
 .available-plans-section .aps-wrapper .aps-container .aps-wrp .all-plans-wrapper .apw-wrp .apw-container .apw-plan .apw-btn .middle-cta {
@@ -379,9 +571,46 @@ header nav .menu-links .signup {
   padding: 1rem 0;
 }
 
+@media screen and (max-width: 940px) {
+  .faq-wrp .faq-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .faq-wrp .faq-wrapper .faq-grid-right {
+    margin-top: 4rem;
+    margin-left: unset;
+    width: 100%;
+    height: 44rem;
+    overflow: hidden;
+  }
+  .faq-wrp .faq-wrapper .faq-grid-right .img-wrp img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+}
 @media screen and (max-width: 750px) {
+  .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b {
+    height: 40rem;
+  }
+  .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg .lbw-b .num {
+    font-size: 5rem !important;
+  }
+  .gl-ttl {
+    font-size: 5rem !important;
+  }
+  .grid-right {
+    height: 70rem !important;
+  }
+  .grid-right .ill-image-container {
+    flex-direction: column;
+  }
+  .grid-right .ill-image-container .person-img {
+    transform: scale(1) !important;
+  }
   .site-pri-logo {
     width: 11rem;
+  }
+  .section-ttl {
+    font-size: 3rem !important;
   }
   ul li {
     font-size: 1.5rem !important;
@@ -403,7 +632,7 @@ header nav .menu-links .signup {
     width: unset !important;
     padding: unset;
     font-size: 1.4rem;
-    padding: 1rem 0.3rem !important;
+    padding: 1.6rem 0.3rem !important;
   }
   .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg {
     grid-template-columns: 1fr;
@@ -423,6 +652,11 @@ header nav .menu-links .signup {
   }
   .footer-section-wrapper a {
     font-size: 1.4rem !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .gl-ttl {
+    font-size: 4rem !important;
   }
 }
 @media screen and (max-width: 380px) {
