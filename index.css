@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 :root {
-  --web-primary-color: #179BD7;
+  --web-primary-color: #179bd7;
   --maxWidth: 1300px;
 }
 
@@ -66,6 +66,7 @@ a:hover {
 }
 
 .homepage-ord-wrapper {
+  opacity: 0;
   max-width: var(--maxWidth);
   margin: auto;
   padding: 0 2rem;
@@ -88,7 +89,7 @@ header nav .menu-links a {
   padding: 0.8rem 2.5rem;
 }
 header nav .menu-links a:nth-child(2) {
-  background-color: #F29C07;
+  background-color: rgba(242, 156, 7, 0.8);
   border: none;
 }
 header nav .menu-links .signup {
@@ -133,8 +134,8 @@ header nav .menu-links .signup {
   margin: 2.5rem 0;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-left .btns-wrp a {
-  background-color: var(--web-primary-color);
-  background-color: #F29C07;
+  background-color: #f29c07;
+  background-color: rgba(242, 156, 7, 0.8);
   border: none;
   margin-right: 2rem;
   width: 18rem;
@@ -194,13 +195,14 @@ header nav .menu-links .signup {
 .available-plans-section {
   padding-top: 1rem;
   background-color: #fbfbfb;
-  padding: 7rem 0;
+  padding: 7rem 2rem;
 }
 .available-plans-section .ap-fp {
   text-align: center;
   padding-top: 2rem;
 }
 .available-plans-section .aps-wrapper {
+  max-width: var(--maxWidth);
   padding: 3rem 0;
   margin: 0 auto;
 }
@@ -398,8 +400,15 @@ header nav .menu-links .signup {
   .top-page-section .tps-wrapper .tps-container .dg-wrp {
     grid-template-columns: 1fr;
   }
-  .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right {
-    height: 30rem;
+  .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-left .btns-wrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-left a {
+    width: unset !important;
+    padding: unset;
+    font-size: 1.4rem;
+    padding: 1rem 0.3rem !important;
   }
   .lt-benefits-wrapper .lbw-wrp .lbw-container .lbw-dg {
     grid-template-columns: 1fr;
@@ -416,5 +425,16 @@ header nav .menu-links .signup {
   }
   .mtk .mtk-wrp .mtk-hd h1 {
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  header nav .menu-links a {
+    width: unset !important;
+    padding: unset;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  header nav .menu-links .signup {
+    margin-left: 1rem;
   }
 }/*# sourceMappingURL=index.css.map */

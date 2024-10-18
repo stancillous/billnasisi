@@ -2,7 +2,7 @@
 
 :root {
   // --web-primary-color: #326982;
-  --web-primary-color: #179BD7;
+  --web-primary-color: #179bd7;
   --maxWidth: 1300px;
 }
 * {
@@ -33,7 +33,7 @@ a {
   border-radius: 10rem;
   border: 1px solid;
   padding: 1.3rem 2rem;
-          font-weight: 500;
+  font-weight: 500;
 
   display: inline-block;
 
@@ -41,7 +41,6 @@ a {
     opacity: 0.8;
   }
 }
-
 
 .section-ttl {
   font-weight: 500;
@@ -67,7 +66,8 @@ a {
   opacity: 0.6;
 }
 
-.homepage-ord-wrapper{
+.homepage-ord-wrapper {
+  opacity: 0;
   max-width: var(--maxWidth);
   margin: auto;
   padding: 0 2rem;
@@ -88,8 +88,8 @@ header {
       a {
         padding: 0.8rem 2.5rem;
 
-        &:nth-child(2){
-            background-color: #F29C07;
+        &:nth-child(2) {
+          background-color: #f29c07cc;
           border: none;
         }
       }
@@ -100,8 +100,9 @@ header {
   }
 }
 
+
 .top-page-section {
-                  // background-color: #f1dab63e;
+  // background-color: #f1dab63e;
   padding: 10rem 0;
   .tps-wrapper {
     margin: 0 auto;
@@ -134,8 +135,8 @@ header {
           .btns-wrp {
             margin: 2.5rem 0;
             a {
-              background-color: var(--web-primary-color);
-                          background-color: #F29C07;
+              background-color: #f29c07;
+              background-color: rgba(242, 156, 7, 0.8);
               border: none;
               // color: white;
               margin-right: 2rem;
@@ -206,17 +207,17 @@ header {
   }
 }
 
-
 .available-plans-section {
   padding-top: 1rem;
   background-color: #fbfbfb;
-  padding: 7rem 0;
-
+  padding: 7rem 2rem;
+  
   .ap-fp {
     text-align: center;
     padding-top: 2rem;
   }
   .aps-wrapper {
+    max-width: var(--maxWidth);
     padding: 3rem 0;
     margin: 0 auto;
     .aps-container {
@@ -249,8 +250,8 @@ header {
               grid-template-columns: repeat(3, 1fr);
               grid-gap: 0.5rem;
               .apw-plan {
-                border-radius: .5rem;
-                  background-color: #eae6e03e;
+                border-radius: 0.5rem;
+                background-color: #eae6e03e;
 
                 padding: 5rem 1.7rem;
                 .license {
@@ -278,7 +279,7 @@ header {
                       background-color: var(--web-primary-color);
                       background-color: black;
                       left: 0;
-                      opacity: .5;
+                      opacity: 0.5;
                     }
                   }
 
@@ -353,34 +354,33 @@ header {
   }
 }
 
-.mtk{
+.mtk {
   margin: 8rem auto;
   padding: 1rem 0;
-  .mtk-wrp{
+  .mtk-wrp {
     text-align: center;
-    .mtk-hd{
-        p{
-            width: 500px;
-            margin: auto;
-            opacity: .8;
-        }
-      h1{
+    .mtk-hd {
+      p {
+        width: 500px;
+        margin: auto;
+        opacity: 0.8;
+      }
+      h1 {
         font-size: 4rem;
         margin: 2rem 0;
         font-weight: 400;
       }
     }
 
-    .img{
+    .img {
       display: grid;
       place-items: center;
-      img{
+      img {
         width: 93rem;
         width: 100%;
         mix-blend-mode: multiply;
       }
     }
-
   }
 }
 
@@ -445,24 +445,34 @@ header {
 }
 
 @media screen and (max-width: 750px) {
-
-    .site-pri-logo{
-        width: 11rem;
-    }
-ul li{
+  .site-pri-logo {
+    width: 11rem;
+  }
+  ul li {
     font-size: 1.5rem !important;
-}
-  p{
+  }
+  p {
     font-size: 1.5rem;
   }
+
   .top-page-section {
     padding-top: 3rem;
     .tps-wrapper .tps-container .dg-wrp {
       grid-template-columns: 1fr;
 
-      .grid-right {
-        height: 30rem;
+      .grid-left{
+        .btns-wrp{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        a{
+          width: unset !important;
+          padding: unset;
+          font-size: 1.4rem;
+          padding: 1rem .3rem !important;
+        }
       }
+
     }
   }
 
@@ -487,13 +497,32 @@ ul li{
     }
   }
 
-  .mtk .mtk-wrp .mtk-hd
-  {
-    p{
-        width: unset;
+  .mtk .mtk-wrp .mtk-hd {
+    p {
+      width: unset;
     }
-      h1{
-       font-size: 2.5rem;
-     }
+    h1 {
+      font-size: 2.5rem;
+    }
   }
+}
+
+@media screen and (max-width: 380px) {
+
+  header nav{
+    .menu-links{
+      a{
+        width: unset !important;
+        padding: unset;
+        padding: .7rem 1.5rem;
+        font-size: 1.2rem;
+
+      
+      }
+      .signup{
+        margin-left: 1rem;
+      }
+    }
+  }
+  
 }

@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+
   gsap.registerPlugin(ScrollTrigger);
   pageFunctions()
 });
 
 
+
 function pageFunctions() {
+
+  gsap.to(".homepage-ord-wrapper", {
+    opacity: 1
+  })
+  gsap.from("header", {
+    opacity: 0,
+    y: -4
+  })
  
     let tl = gsap.timeline()
     tl.from(".animate-section", {
