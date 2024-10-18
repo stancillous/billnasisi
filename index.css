@@ -347,11 +347,6 @@ header nav .menu-links .signup {
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-right .logo-wrp a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: var(--web-primary-color);
-}
 .footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-right .logo-wrp p {
   padding: 2rem 0;
   font-weight: 400;
@@ -425,6 +420,9 @@ header nav .menu-links .signup {
   }
   .mtk .mtk-wrp .mtk-hd h1 {
     font-size: 2.5rem;
+  }
+  .footer-section-wrapper a {
+    font-size: 1.4rem !important;
   }
 }
 @media screen and (max-width: 380px) {

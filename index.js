@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.registerPlugin(ScrollTrigger);
   pageFunctions()
+  // dynamically set year on the footer
+  document.querySelector(".year-wrp").textContent =  new Date().getFullYear()
 });
 
 
