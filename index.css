@@ -29,6 +29,10 @@ body {
   width: 100vw;
 }
 
+main {
+  overflow: hidden;
+}
+
 p {
   font-size: 1.7rem;
 }
@@ -184,6 +188,7 @@ header nav .menu-links .signup {
   margin-right: unset;
 }
 .top-page-section .tps-wrapper .tps-container .dg-wrp .grid-right .img-wrp {
+  margin-left: -8rem;
   height: 100%;
   width: 140%;
 }
@@ -528,62 +533,39 @@ header nav .menu-links .signup {
   mix-blend-mode: multiply;
 }
 
-.footer-section-wrapper .fsw-wrapper {
-  padding: 9rem 0;
-  margin: 0 auto;
-  font-size: 1.4rem;
+.page-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div {
-  grid-gap: 1rem;
+.page-footer .pf-wrp {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left ul li {
-  list-style: none;
-  font-size: 1.3rem;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left p {
-  padding: 1rem 0;
-  font-size: 1.3rem;
-  font-weight: 300;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .grid-left a {
-  border: none;
-  padding: 0.1rem 0;
-  text-decoration: none;
-  color: black;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .footer-icons {
+.page-footer .pf-wrp .left-grid {
   display: flex;
   align-items: center;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .footer-icons a {
-  border: none;
+.page-footer .pf-wrp .footer-cta {
+  margin-left: 3rem;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .footer-icons svg {
-  width: 3rem;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .footer-icons .footer-cta {
-  margin-left: 4rem;
-}
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .grid-div .footer-icons .footer-cta a {
-  background-color: var(--web-secondary-color);
-  border: none;
+.page-footer .pf-wrp .footer-cta a {
+  width: 20rem;
   background-color: var(--web-sec-color);
   color: white;
 }
-.footer-section-wrapper .fsw-wrapper .fsw-wrp .fsw-container .footer-tm {
-  margin-top: 5rem;
-  padding: 1rem 0;
+.page-footer .pf-wrp .right-grid {
+  display: flex;
+  align-items: center;
+}
+.page-footer .pf-wrp .right-grid a {
+  all: unset;
+  border: none;
+}
+.page-footer .pf-wrp .right-grid a svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1.5rem;
 }
 
 @media screen and (max-width: 940px) {
@@ -670,13 +652,28 @@ header nav .menu-links .signup {
   .mtk .mtk-wrp .mtk-hd h1 {
     font-size: 2.5rem;
   }
-  .footer-section-wrapper a {
-    font-size: 1.4rem !important;
-  }
 }
 @media screen and (max-width: 550px) {
   .gl-ttl {
     font-size: 3.2rem !important;
+  }
+  .page-footer {
+    display: grid;
+    place-items: center;
+  }
+  .page-footer .pf-wrp {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .page-footer .pf-wrp .left-grid {
+    display: grid;
+    place-items: center;
+  }
+  .page-footer .pf-wrp .footer-cta {
+    margin-left: unset;
+  }
+  .page-footer .pf-wrp .g-content {
+    margin: 1.4rem 0;
   }
 }
 @media screen and (max-width: 380px) {

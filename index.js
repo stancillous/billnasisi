@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
   pageFunctions()
   faqs()
-  // dynamically set year on the footer
-  document.querySelector(".year-wrp").textContent =  new Date().getFullYear()
 });
 
 
@@ -95,15 +93,6 @@ function pageFunctions() {
       },
     });
     
-    mtkTl.from(".mtk-ttl", {
-        y: 6,
-        opacity: 0,  
-        stagger: .04
-    })
-    
-    mtkTl.from(".img", {
-        opacity: 0,
-    })
     
     /**animation for the footer */
     let footerTl = gsap.timeline({
