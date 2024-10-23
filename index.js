@@ -69,21 +69,7 @@ function pageFunctions() {
       y: 34
      })
 
-    /**animation for the image on the hero section */
-    let imgTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".lt-benefits-wrapper",
-        scrub: 1,
-        start: "top 60%",
-        ease: "Back.easeOut",
-        toggleActions: "play pause resume reset",
-      },
-    });
 
-    imgTl.to(".person-img", {
-        x: 232,
-        scale: 4
-    })
     /**animation for the plans/pricing section */
     let plansTl = gsap.timeline({
       scrollTrigger: {
@@ -129,9 +115,9 @@ function pageFunctions() {
       },
     });
     
-    footerTl.from(".fsw-wrapper", {
-        y: 34,
-        opacity: 0
-    })
+    // footerTl.from(".fsw-wrapper", {
+    //     y: 34,
+    //     opacity: 0
+    // })
 
 }
